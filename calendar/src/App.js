@@ -13,7 +13,9 @@ class App extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
-    return createUser(this.state.firstName, this.state.lastName);
+    return createUser(this.state.firstName, this.state.lastName)
+      .then(() => console.log('OK'))
+      .catch(error => console.log(error));
   };
 
   updateFirstName = event => {
@@ -30,7 +32,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
           <form onSubmit={this.handleSubmit}>
             <label>
               Prénom:
@@ -42,7 +44,7 @@ class App extends Component {
             </label>
             <input type="submit" value="Valider" />
           </form>
-        </p>
+        </div>
       </div>
     );
   }
