@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
-    "start:dev": "nodemon ./bin/www"
+    "start:dev": "sequelize db:migrate && nodemon ./bin/www",
+    "start": "sequelize db:migrate && node server.js"
   },
   "author": "yassinecc",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "sequelize-cli": "^4.0.0"
   }
 }
