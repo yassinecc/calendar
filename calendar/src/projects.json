@@ -1,0 +1,26 @@
+{
+  "alpha": {
+    "project": "Alpha",
+    "projectType": "RFP",
+    "client": "EDF",
+    "industry": "Energy"
+  },
+  "beta": {
+    "project": "Beta",
+    "projectType": "Sell-side",
+    "client": "Google",
+    "industry": "Tech"
+  },
+  "gamma": {
+    "project": "Gamma",
+    "projectType": "Buy-side",
+    "client": "Apple",
+    "industry": "Tech"
+  },
+  "omega": {
+    "project": "Omega",
+    "projectType": "Pitch",
+    "client": "JGC",
+    "industry": "Industrials"
+  }
+}
