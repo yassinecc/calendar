@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import ReactTable from 'react-table';
+import 'react-table/react-table.css';
 import logo from './logo.svg';
 import './App.css';
 import { createUser } from './services/api';
+import data from './data';
 
 class App extends Component {
   constructor() {
@@ -44,6 +47,56 @@ class App extends Component {
             </label>
             <input type="submit" value="Valider" />
           </form>
+        </div>
+        <div>
+          <ReactTable
+            data={data}
+            columns={[
+              {
+                Header: 'First Name',
+                accessor: 'firstName',
+              },
+              {
+                Header: 'Last Name',
+                accessor: 'lastName',
+              },
+              {
+                Header: 'Rank',
+                accessor: 'rank',
+              },
+              {
+                Header: 'Project',
+                accessor: 'project',
+              },
+              {
+                Header: 'Project type',
+                accessor: 'projectType',
+              },
+              {
+                Header: 'Client',
+                accessor: 'client',
+              },
+              {
+                Header: 'Industry',
+                accessor: 'industry',
+              },
+              {
+                Header: 'Start date',
+                accessor: 'startDate',
+              },
+              {
+                Header: 'End date',
+                accessor: 'endDate',
+              },
+              {
+                Header: 'Intensity',
+                accessor: 'intensity',
+              },
+            ]}
+            defaultPageSize={10}
+            className="-striped -highlight"
+          />
+          <br />
         </div>
       </div>
     );
